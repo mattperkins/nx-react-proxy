@@ -1,0 +1,36 @@
+{
+  "name": "react-cloner",
+  "version": "1.0.0",
+  "description": "react client",
+  "author": "DORMshed",
+  "license": "ISC",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 3002 --compress --mode development",
+    "test": "standard && node test.js",
+    "dev-build": "webpack --mode development --progress",
+    "build": "webpack --mode production --progress",
+    "deploy": "cp now.json dist/ && cd dist && now && now alias && rm now.json"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "axios": "^0.18.0",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^4.0.0-beta.2",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
